@@ -1,0 +1,231 @@
+*{
+    box-sizing: border-box;
+    font-style: Lucida;
+    overflow-x: hidden;
+    object-fit: contain;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #f8eff3;
+}
+.Green-c{
+    color: #DBEEE3;
+    color: #96D1AD;
+    color: #006838;
+}
+.Green-bg{
+    color: #DBEEE3;
+    color: #96D1AD;
+    color: #006838;
+}
+.Red-c{
+    color: #F9D3D5;
+    color: #F3818B;
+    color: #E32328;
+}
+.Red-bg{
+    color: #F9D3D5;
+    color: #F3818B;
+    color: #E32328;
+}
+.hero{
+    position: relative;
+    height: auto;
+}
+
+button{
+    background-color: #DBEEE3;
+    color: #006838;    
+    border-radius: .5rem;
+}
+
+nav{
+    height: 4rem;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #F9D3D5;
+    position: relative;
+}
+.nav{
+    position: fixed;
+}
+nav .logo{
+    height: auto;
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav .logo img{
+    height: 3rem;
+}
+nav .menu{
+    height: 100%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav .menu ul{
+    text-decoration: none;
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 3rem;
+}
+nav .menu ul a{
+    color: #fff;
+    margin-left: 3rem;
+    text-decoration: none;
+    margin-top: .75rem;
+}
+nav .menu ul a li{
+    height: auto;
+    width: 100%;
+    display:inline;
+    justify-content: center;
+    align-items: center;
+    color: #1d083a;
+}
+.categories{
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+}
+.categories ul{
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.categories ul li button{
+    height: auto;
+    width: 100%;
+    margin-top: .75rem;
+    margin-left: .25rem;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    height: 2rem;
+    width: 8.5rem;
+    border: none;
+    border-radius: .5rem;
+    font-size: .75rem;
+}
+.for-you{
+    padding-left: 2rem;
+    background-color: #fff9fc;
+}
+.for-you h1{
+    color: #1d083a;
+    font-size: 2rem;
+    font-weight: bolder;
+    margin-left: 1.25rem;
+}
+i{
+    height: 2rem;
+    width: auto;
+    border: solid;
+}
+.items{
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.card{
+    height: 19rem;
+    width: 15rem;
+    padding: 0;
+    margin: .25rem;
+    background-color: #e7dbfa;
+}
+.card img{
+    width:15rem;
+    height: 10rem;
+    object-fit: cover;
+}
+.card h1{
+    font-size: 1.25rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+.card h2{
+    font-size: .75rem;
+    margin-left: 1rem;
+}
+.card button{
+    margin-left: 30%;
+    border: none;
+    width:5rem;
+    height:2.5rem;
+    margin-top: 1rem;
+}
+.cart{
+    width: 6rem;
+    height: 2.5rem;
+}
+.near-you{
+    padding-left: 2rem;
+    background-color: #fff9fc;
+}
+.near-you h1{
+    color: #1d083a;
+    font-size: 2rem;
+    font-weight: bolder;
+    margin-left: 1.25rem;
+}
+.card h1{
+    font-size: 1.25rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+.more{
+    background-color: #e7dbfa;
+    color: hotpink;
+    width: 5rem;
+    height: 2rem;
+    border-radius: 0;
+    position: relative;
+    left: 45%;
+    margin-top: 2rem;
+}
+footer{
+    background-color: #1d083a;
+    height: 10rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    color: #fff;
+    padding-top:1rem;
+    padding-left: 1.5rem;
+    font-weight: 100;
+    font-size:small;
+}
+.contacts{
+    text-align: center;
+}
+.policies{
+    margin-left:7.5rem;
+    text-align: center;
+}
+.about-us{
+    margin-left: 7.5rem;
+
+    text-align: center;
+}
