@@ -10,7 +10,7 @@
     scroll-behavior: smooth;
 }
 body{
-    background-color: #f8eff3;
+    background-color: #fff;
 }
 .Green-c{
     color: #DBEEE3;
@@ -46,14 +46,11 @@ button{
 nav{
     height: 4rem;
     width: 100%;
-    display: flex;
     justify-content: flex-start;
+    display: flex;
     align-items: center;
     background-color: #F9D3D5;
-    position: relative;
-}
-.nav{
-    position: fixed;
+    position: static;
 }
 nav .logo{
     height: auto;
@@ -96,88 +93,208 @@ nav .menu ul a li{
     color: #1d083a;
 }
 .categories{
-    height: auto;
-    width: 100%;
-    display: flex;
+    height: 5rem;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     top: 50%;
+    overflow-y: hidden;
 }
 .categories ul{
-    height: auto;
-    width: 100%;
+    height: 100%;
+    width: 1500px;
     display: flex;
     justify-content: center;
-    align-items: center;
+}
+.categories ul a{
+    text-decoration: none;
 }
 .categories ul li button{
     height: auto;
-    width: 100%;
-    margin-top: .75rem;
-    margin-left: .25rem;
+    margin-top: .5rem;
+    margin-right: .5rem;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items:center;
-    height: 2rem;
-    width: 8.5rem;
+    width: 9rem;
     border: none;
     border-radius: .5rem;
     font-size: .75rem;
+    overflow: visible;
 }
-.for-you{
+.categories ul li button img{
+    height: 2rem;
+    width: 2rem;
+    display: flex;
+    align-items:center;
+    background-color: #96D1AD;
+    border-radius: .5rem;
+    margin-right: .5rem;
+}
+.fruits{
     padding-left: 2rem;
-    background-color: #fff9fc;
+    background-color: #DBEEE3;
 }
-.for-you h1{
-    color: #1d083a;
-    font-size: 2rem;
+.fruits h1{
+    color: #E32328;
+    font-size: 1.5rem;
     font-weight: bolder;
     margin-left: 1.25rem;
 }
-i{
-    height: 2rem;
-    width: auto;
-    border: solid;
+.fruits h2{
+    color: #E32328;
+}
+.for-you{
+    padding-left: 2rem;
+    background-color: #DBEEE3;
+}
+.for-you h1{
+    color: #006838;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    margin-left: 1.25rem;
+}
+.for-you, .vegies h2{
+    color: #006838;
+}
+.vegies{
+    padding-left: 2rem;
+    background-color: #DBEEE3;
+}
+.vegies h1{
+    color: #006838;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    margin-left: 1.25rem;
+}
+.recipes{
+    padding-left: 2rem;
+    background-color: #fff9fc;
+}
+.recipes h1{
+    color: #006838;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    margin-left: 1.25rem;
 }
 .items{
-    width: auto;
+    width: 100%;
     height: auto;
-    display: flex;
-    justify-content: flex-start;
+    display: inline-flex;
+    justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
 }
 .card{
-    height: 19rem;
-    width: 15rem;
+    height: 36vh;
+    max-width: 15vw;
+    min-width: 12.5rem;
     padding: 0;
     margin: .25rem;
-    background-color: #e7dbfa;
+    background-color: #ffffff;
+    border: none;    
+    overflow: hidden;
+}
+.card-body{
+    overflow: hidden;
 }
 .card img{
-    width:15rem;
+    width: 12.5rem;
     height: 10rem;
-    object-fit: cover;
+    object-fit: contain;
+    transform: scale(.8);
+    overflow: hidden;
 }
 .card h1{
-    font-size: 1.25rem;
-    margin-top: 1rem;
+    font-size: .8rem;
+    margin-top: .25rem;
     margin-left: 1rem;
+    overflow: hidden;
 }
 .card h2{
-    font-size: .75rem;
+    font-size: .65rem;
     margin-left: 1rem;
+    overflow: hidden;
 }
-.card button{
-    margin-left: 30%;
+.cartbtn{
     border: none;
-    width:5rem;
-    height:2.5rem;
-    margin-top: 1rem;
+    position: absolute;
+    display: flex;
+    width:2rem;
+    height:2rem;
+    justify-content: center;
+    align-items: center;
+    bottom: .5rem;
+    right: .5rem;
+    background-color: #DBEEE3;
+    color: #006838;
+}
+.card-like{
+    border: none;
+    position: absolute;
+    display: flex;
+    width:2rem;
+    height:2rem;
+    justify-content: center;
+    align-items: center;
+    top: .1rem;
+    right: .1rem;
+    background-color: #f3818b00;
+    color: #F9D3D5;
+}
+.for-you .card-like{
+    color: #E32328;
+}
+.bookm{
+    border: none;
+    position: absolute;
+    display: flex;
+    width:2rem;
+    height:2rem;
+    justify-content: center;
+    align-items: center;
+    bottom: .5rem;
+    right: 2.75rem;
+    background-color: #F9D3D5;
+    color: #f3818b;
+}
+.desc{
+    width: fit-content;
+}
+.recipes{
+    padding-left: 2rem;
+    background-color: #fff9fc;
+}
+.recipes h1{
+    color: #006838;
+    font-size: 1rem;
+    font-weight: bolder;
+    margin-left: 1rem;
+    margin-bottom: .1rem;
+}
+.recipes h2{
+    color: #006838;
+    margin-top: 0;
+    margin-bottom: 0.1rem;
+}
+.recipes .card img{
+    height: 100%;
+    width: 100%;
+    transform: scale(1.6);
+    object-fit: contain;
+}
+.recipes .desc{
+    position: absolute;
+    bottom: 0;
+    background-image: linear-gradient(#f9d3d581, #F9D3D5);
+    width: 100%;
+    color: #006838;
 }
 .cart{
     width: 6rem;
     height: 2.5rem;
+}
+.desc:hover{
+    transform: translate(0rem);
 }
 .near-you{
     padding-left: 2rem;
@@ -189,33 +306,17 @@ i{
     font-weight: bolder;
     margin-left: 1.25rem;
 }
-.card h1{
-    font-size: 1.25rem;
-    margin-top: 1rem;
-    margin-left: 1rem;
-}
-.more{
-    background-color: #e7dbfa;
-    color: hotpink;
-    width: 5rem;
-    height: 2rem;
-    border-radius: 0;
-    position: relative;
-    left: 45%;
-    margin-top: 2rem;
-}
 footer{
     background-color: #1d083a;
     height: 10rem;
-    width: 100%;
     display: flex;
     justify-content: center;
     margin-top: 1rem;
     color: #fff;
     padding-top:1rem;
-    padding-left: 1.5rem;
     font-weight: 100;
     font-size:small;
+    margin-bottom: 0;
 }
 .contacts{
     text-align: center;
@@ -229,3 +330,329 @@ footer{
 
     text-align: center;
 }
+.fa{
+    size: 1rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.see-more{
+    position: absolute;
+    right: .25rem;
+    font-size: 1rem;
+}
+.headers{
+    position: relative;
+    display: flex;
+    height: max-content;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-y: hidden;
+}
+.headers h1, h2{
+    overflow-y: hidden;
+}
+.headers h1{
+    color: #006838;
+}
+.headers h2{
+    color: #006838;
+}
+.act{
+    color: #E32328;
+}
+.modal{
+    font-style: Lucida;
+}
+.modal-body{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.modal-body img{
+    width: 100%;
+    height: 20rem;
+    object-fit: contain;
+}
+.modal-body .btn-close{
+    position: absolute;
+    top: .5rem;
+    left: .5rem;
+    color: #006838;
+}
+.modal-body .card-like{
+    right: .5rem;
+    top: .5rem;
+    font-size: 1.5rem;
+    color: #E32328;
+}
+.modal-body h1{
+    color: #006838;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    margin-left: 1.25rem;
+    overflow: hidden;
+}
+.modal-body h2{
+    color: #006838;
+    font-size: 1rem;
+    margin-left: 1.25rem;
+    font-weight: bold;
+}
+.modal-body i{
+    color: #E32328;
+}  
+.modal-body p{
+    color: #006838;
+    font-size: .75rem;
+    font-weight: normal;
+    margin-left: 1.25rem;
+}
+.btnm{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 10rem;
+    height:  2rem;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin-left: .75rem;
+    border: none;
+}
+.modal-desc{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.title-units{
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+.units{
+    position: absolute;
+    right: .5rem;
+}
+.units-btn{
+    width: 2rem;
+    height: 2rem;
+    border: .05rem solid #96D1AD;
+    border-radius: 0;
+}
+.less, .add{
+    border-radius: 1rem;
+    height: 1.75rem;
+    width: 1.75rem;
+    font-weight: bold;
+}
+.total{
+    width: 2.25rem;
+}
+.add{
+    background-color: #006838;
+    color: #DBEEE3;
+}
+.desc-info{
+    display: flex;
+    flex-direction: column;
+}
+.desc-vendor{
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+.desc-vendor h2{
+    font-weight: bold;
+    font-size: .75rem;
+    top: .2rem;
+    width: auto;
+    position: relative;
+    display: flex;
+    align-items: baseline;
+}
+.modal-footer{
+    background-color: #006838;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+.modal-footer h2{
+    border: .1rem solid #96D1AD;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    color: #DBEEE3;
+}
+.modal-footer .price{
+    color: #96D1AD;   
+    border: none;
+}
+.modal-cart{
+    position: relative;
+    width: 7.5rem;
+    height: 2.5rem;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    font-size: .95rem;
+    font-weight: bold;
+    margin-left: 1rem;
+}
+
+ #menuToggle
+ {
+   display: block;
+   position: relative;
+   top: 50px;
+   left: 50px;
+   
+   z-index: 1;
+   
+   -webkit-user-select: none;
+   user-select: none;
+ }
+ 
+ #menuToggle a
+ {
+   text-decoration: none;
+   color: #232323;
+   
+   transition: color 0.3s ease;
+ }
+ 
+ #menuToggle a:hover
+ {
+   color: tomato;
+ }
+ 
+ 
+ #menuToggle input
+ {
+   display: block;
+   width: 40px;
+   height: 32px;
+   position: absolute;
+   top: -7px;
+   left: -5px;
+   
+   cursor: pointer;
+   
+   opacity: 0; /* hide this */
+   z-index: 2; /* and place it over the hamburger */
+   
+   -webkit-touch-callout: none;
+ }
+
+ #menuToggle span
+ {
+   display: block;
+   width: 33px;
+   height: 4px;
+   margin-bottom: 5px;
+   position: relative;
+   
+   background: #cdcdcd;
+   border-radius: 3px;
+   
+   z-index: 1;
+   
+   transform-origin: 4px 0px;
+   
+   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+               background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+               opacity 0.55s ease;
+ }
+ 
+ #menuToggle span:first-child
+ {
+   transform-origin: 0% 0%;
+ }
+ 
+ #menuToggle span:nth-last-child(2)
+ {
+   transform-origin: 0% 100%;
+ }
+ 
+ /* 
+  * Transform all the slices of hamburger
+  * into a crossmark.
+  */
+ #menuToggle input:checked ~ span
+ {
+   opacity: 1;
+   transform: rotate(45deg) translate(-2px, -1px);
+   background: #232323;
+ }
+ 
+ /*
+  * But let's hide the middle one.
+  */
+ #menuToggle input:checked ~ span:nth-last-child(3)
+ {
+   opacity: 0;
+   transform: rotate(0deg) scale(0.2, 0.2);
+ }
+ 
+ /*
+  * Ohyeah and the last one should go the other direction
+  */
+ #menuToggle input:checked ~ span:nth-last-child(2)
+ {
+   transform: rotate(-45deg) translate(0, -1px);
+ }
+ 
+ /*
+  * Make this absolute positioned
+  * at the top left of the screen
+  */
+ #menu
+ {
+   position: absolute;
+   width: 300px;
+   margin: -100px 0 0 -50px;
+   padding: 50px;
+   padding-top: 125px;
+   
+   background: #ededed;
+   list-style-type: none;
+   -webkit-font-smoothing: antialiased;
+   /* to stop flickering of text in safari */
+   
+   transform-origin: 0% 0%;
+   transform: translate(-100%, 0);
+   
+   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+ }
+ 
+ #menu li
+ {
+   padding: 10px 0;
+   font-size: 22px;
+ }
+ 
+ /*
+  * And let's slide it in from the left
+  */
+ #menuToggle input:checked ~ ul
+ {
+   transform: none;
+ }

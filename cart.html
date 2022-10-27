@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Freshly Cart</title>
+    <link rel="stylesheet" href="Assets/fontawesome-free-6.0.0-web/css/all.min.css">
+    <link rel="stylesheet" href="Assets/bootstrap-5.0 CSS & Jscript/css/bootstrap.min.css">
+    <link rel="stylesheet" href="cart-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="shortcut icon" href="Assets/Logo svg/Asset 4Freshly Logo SVG.svg" type="favicon/ico"/>
+    </head>
+<body>
+  <nav class="shadow-sm">
+    <div class="logo"><img src="Assets/Logo svg/Asset 5Freshly Logo SVG.svg" alt="Logo icon"></div>
+    <div class="menu">
+        <ul>
+            <a href="index.html"><li>Home</li></a>
+            <a href="#"><li>Contact</li></a>
+            <a href="sign-in.html" target="_blank"><li>Sign In</li></a>
+            <a href=""><li><input type="text" name="search" id="search" placeholder="Search"></li></a>
+        </ul>
+    </div>
+  </nav>
+  <div class="checkout-page-content">
+    <div class="for-you shadow-sm" id="recommended">
+      <div class="headers">
+          <h1>Your Cart Items</h1>
+      </div>
+      <div class="items">
+        <div class="card" data-toggle="modal" data-target="#exampleModalCenter" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+          <div class="card-body ps-0 pt-0">
+              <img src="Assets/Images/pineapple-500x500-removebg-preview.png" alt="Items">
+              <div class="desc desc-item">
+                  <h1>Pinneaples</h1>
+                  <h2>Lorem ipsum, dolor sit adipisicing elit. Perferendis reprehenderit consectetur ea dignissimos, laudantium architecto ex numquam, eaque, nihil debitis eos sit iure? Ducimus quisquam fugiat aperiam.</h2>
+                  <h1>Seller Info</h1>
+                  <div class="desc-vendor">
+                    <button class="btnm"><i class="fa fa-location"></i><h2>Katumani Market</h2></button>
+                    <button class="btnm"><i class="fa fa-timeline"></i><h2>17min</h2></button>
+                </div>
+              </div>
+              <div class="desc desc-price">
+                <div class="units">
+                  <button class="units-btn less shadow-lg">-</button>
+                  <button class="units-btn total">2</button>
+                  <button class="units-btn add shadow-lg">+</button>
+                </div>
+                <div class="price">
+                  <h1>Ksh. 60/Pc</h1>
+                </div>
+                <div class="totals">           
+                  <h3>TOTAL</h3>
+                  <button class="cart-remove">120 Ksh.</button></div>
+                </div>
+              
+              <button type="button" class="cartbtn"><i class="fa fa-trash-can"></i></button>
+              <button class="card-like"><i class="fa-solid fa-heart"></i></button>
+          </div>
+      </div>
+
+      </div>
+    </div>
+    <div class="checkout">
+      <div class="headers">
+        <h1>Checkout Details</h1>
+      </div>
+      <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              Shipping Location
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body payment">
+              <h2>Freshly wants to know your location</h2>
+              <div class="vendors">
+                <div class="mpesa shadow-lg">
+                  <input type="radio" name="Mpesa" id="Mpesa">
+                  <h3>E85, Westlands, Nairobi</h3>
+                </div>
+                <div class="mpesa shadow-lg">
+                  <input type="radio" name="Mpesa" id="Mpesa">
+                  <h3>Pin on map</h3>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+              Delivery Time
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body payment">
+              <h2>When do we deliver</h2>
+              <div class="vendors">
+                <div class="mpesa shadow-lg">
+                  <input type="radio" name="Mpesa" id="Mpesa">
+                  <h3>Soonest</h3>
+                </div>
+                <div class="mpesa shadow-lg">
+                  <input type="radio" name="Mpesa" id="Mpesa">
+                  <h3>Today at 6PM</h3>
+                </div>
+                <div class="mpesa shadow-lg">
+                  <input type="radio" name="Mpesa" id="Mpesa">
+                  <h3>Tommorrow</h3>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+              Payment Details
+            </button>
+          </h2>
+          <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body payment">
+              <h2>How do you want to pay</h2>
+              <div class="vendors">
+                <div class="mpesa shadow-lg">
+                  <input type="radio" name="Mpesa" id="Mpesa">
+                  <img src="/Assets/Images/Safaricom-Launches-Lipa-Na-M-PESA-Business-App.png" alt="Mpesa">
+                  <h3>Mpesa</h3>
+                  <h3>0712345678</h3>
+                </div>
+                <div class="mpesa shadow-lg">
+                  <input type="radio" name="Mpesa" id="Mpesa">
+                  <img src="/Assets/Images/viupay_agents-removebg-preview (1).png" alt="ViuPay">
+                  <h3>ViuPay</h3>
+                  <h3>0712345678</h3>
+                </div>
+                <div class="mpesa shadow-lg">
+                  <input type="radio" name="Mpesa" id="Mpesa">
+                  <img src="/Assets/Images/equity.png" alt="Equity">
+                  <h3>Equity</h3>
+                  <h3>0712345678</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="final-checkout">
+          <div class="buy">
+          <h1>Total</h1>
+          <h4>Ksh 120</h4>
+          <a href="index.html"><button>Buy</button></a>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="Assets/bootstrap-5.0 CSS & Jscript/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,357 @@
+nav{
+    height: 4rem;
+    width: 100%;
+    justify-content: flex-start;
+    display: flex;
+    align-items: center;
+    background-color: #F9D3D5;
+    position: static;
+}
+nav .logo{
+    height: auto;
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav .logo img{
+    height: 3rem;
+}
+nav .menu{
+    height: 100%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav .menu ul{
+    text-decoration: none;
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 3rem;
+}
+nav .menu ul a{
+    color: #fff;
+    margin-left: 3rem;
+    text-decoration: none;
+    margin-top: .75rem;
+}
+nav .menu ul a li{
+    height: auto;
+    width: 100%;
+    display:inline;
+    justify-content: center;
+    align-items: center;
+    color: #1d083a;
+}
+.checkout-page-content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.headers{
+    position: relative;
+    display: flex;
+    height: max-content;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    overflow-y: hidden;
+}
+.for-you{
+    background-color: #fff9fc;
+    max-width: 70%;
+    min-width: 30rem;
+}
+.for-you h1{    
+    color: #006838;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    margin-left: 1.25rem;
+}
+.headers h1, h2{
+    overflow-y: hidden;
+}
+.headers h1{
+    color: #006838;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    margin-left: 1.25rem;
+}
+.headers h2{
+    color: #006838;
+}
+.items{
+    width: 100%;
+    height: auto;
+    display: inline-flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #fff9fc;
+}
+.card{
+    height: 36vh;
+    width: 90%;
+    padding: 0;
+    margin: .25rem;
+    background-color: #ffffff;
+    border: none;    
+    overflow: hidden;
+}
+.card-body{
+    overflow: hidden;
+    background-color: #DBEEE3;
+    display: flex;
+    height: 100%;
+    position: relative;
+    width: auto;
+    align-items: center;
+}
+.card img{
+    height: 36vh;
+    width: auto;
+    object-fit: contain;
+    overflow: hidden;
+    background-color: #E32328;
+}
+.card h1{
+    font-size: 1rem;
+    margin-top: .25rem;
+    margin-left: 1rem;
+    overflow: hidden;
+}
+.card h2{
+    font-size: .8rem;
+    margin-left: 1rem;
+    overflow: hidden;
+}
+.cartbtn{
+    border: none;
+    position: absolute;
+    display: flex;
+    width:2rem;
+    height:2rem;
+    justify-content: center;
+    align-items: center;
+    bottom: .5rem;
+    right: .5rem;
+    background-color: #DBEEE3;
+    color: #006838;
+}
+.card-like{
+    border: none;
+    position: absolute;
+    display: flex;
+    width:2rem;
+    height:2rem;
+    justify-content: center;
+    align-items: center;
+    top: .1rem;
+    right: .1rem;
+    background-color: #f3818b00;
+    color: #F9D3D5;
+}
+.for-you .card-like{
+    color: #E32328;
+}
+.desc{
+    width: 35%;
+    text-align: justify;
+}
+.desc-vendor{
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    flex-direction: row;
+    margin-left: 1rem;
+}
+.desc-vendor h2{
+    font-weight: bold;
+    font-size: .75rem;
+    top: .2rem;
+    width: auto;
+    position: relative;
+    display: flex;
+    align-items: baseline;
+}
+.btnm{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 10rem;
+    height: 3rem;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    margin-right: .25rem;
+}
+.desc-price{
+    width: auto;
+    height: 100%;
+    display: block;
+    flex-wrap: wrap;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-left: 2rem;
+    margin-top: 1rem;
+}
+
+.units{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-size: 1.25rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.units-btn{
+    width: 5rem;
+    height: 3rem;
+    border: none;
+}
+.less, .add{
+    border-radius: .25rem;
+    height: 3rem;
+    width: 5rem;
+    font-weight: bold;
+}
+.total{
+    width: 3rem;
+    margin-left: .25rem;
+    margin-right: .25rem;
+    border-radius: .25rem;
+}
+.add{
+    background-color: #006838;
+    color: #DBEEE3;
+}
+.cart-remove{
+    background-color: #96D1AD;
+    color: #006838;
+    height: 3rem;
+    width: 7rem;
+    font-weight: bold;
+    border-radius: .25rem;
+    border: none;
+}
+.cartbtn{
+    font-size: 1.5rem;
+}
+h3{
+    font-size: 1rem;
+    margin-top: .5rem;
+    margin-right: .25rem;
+}
+.totals{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: auto;
+    width: 100%;
+}
+.price{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: auto;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.checkout{
+    width: 30vw;
+    min-width: 22.5rem;
+}
+.final-checkout{
+    background-color: #DBEEE3;
+    position: absolute;
+    height: 10rem;
+    width: 30%;
+    bottom: 0rem;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.payment h2{
+    color: #006838;
+    font-size: 1.25rem;
+    font-weight: bolder;
+}
+.vendors{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+.mpesa{
+    height: 3.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    margin-bottom: .5rem;
+    border-radius: .25rem;
+}
+.mpesa img{
+    width: 4rem;
+    height: 3.5rem;
+    object-fit: contain;
+    background-color: #DBEEE3;
+}
+.mpesa h3{
+    margin-left: .5rem;
+}
+.mpesa input{
+    position: absolute;
+    right: 1.5rem;
+    height: 2rem;
+    accent-color: #006838;
+}
+.buy{
+    height: 3.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.buy h1{
+    font-size: 2rem;
+    margin-right: .25rem;
+}
+.buy h4{
+    font-size: 2rem;
+    margin-right: .25rem;
+    border: .1rem solid #96D1AD;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+    color: #006838;
+}
+.buy button{
+    height: 3rem;
+    width: 6rem;
+    border: none;
+    margin-left: .5rem;
+    background-color: #006838;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: #DBEEE3;
+}

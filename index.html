@@ -4,243 +4,532 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="google-site-verification" content="-6RPCDha--jgBmGko9ilrCD4ll8HxFZNkQYsk1BKbx8" />
 <title>Freshly</title>
-<link rel="stylesheet" href="assets/Files/bootstrap-5.0 CSS & Jscript/css/bootstrap.min.css">
-<link rel="stylesheet" href="assets/Files/fontawesome-free-6.0.0-web/fontawesome-free-6.0.0-web/css/fontawesome.min.css">
-<script src="assets/icofont/icofont.min.css"></script>
-<link rel="stylesheet" href="/style.css">
-<link rel="shortcut icon" href="/Assets/2x/Asset 4Freshly Logo PNG.png" type="favicon/ico" />
-<script src="assets/Files/bootstrap-5.0 CSS & Jscript/jquery/jquery.min.js"></script>
-<script src="assets/Files/bootstrap-5.0 CSS & Jscript/js/bootstrap.min.js"></script>
-<head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<script src="https://kit.fontawesome.com/025184af48.js" crossorigin="anonymous"></script></head>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<link rel="shortcut icon" href="Assets/Logo svg/Asset 4Freshly Logo SVG.svg" type="favicon/ico"/>
+</head>
     <body>
-        <nav class="shadow">
-            <div class="logo"><img src="/Assets/2x/Asset 6Freshly Logo PNG.png" alt="Logo icon"></div>
+        <nav class="shadow-sm">
+            <div class="logo"><img src="Assets/Logo svg/Asset 5Freshly Logo SVG.svg" alt="Logo icon"></div>
             <div class="menu">
                 <ul>
-                    <a href="#"><li>Shop</li></a>
-                    <a href="#"><li>Categories</li></a>
-                    <a href="#"><li><button class="btn position-relative cart">
-                        Cart
-                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                          2
-                          <span class="visually-hidden">unread messages</span>
-                        </span>
-                      </button></li></a>
+                    <a href="#"><li>Home</li></a>
+                    <a href="#" onclick="myFunction()"><li>Categories</li></a>
+                    <a href="cart.html"><li>Cart</li></a>
+                    <a href="cart.html"><li>Checkout</li></a>
                     <a href="#"><li>Contact</li></a>
-                    <a href="#"><li><button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                        Sign In
-                      </button></li></a>
-                      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h5 class="modal-title" id="staticBackdropLabel">Sign In</h5>
-                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body d-block">
-                                <label for="email">Email</label>
-                                <input type="email" name="email" id="email" required><br>
-                                <label for="email">Password</label>
-                                <input type="password" name="password" id="password" required>
-                            </div>
-                            <div class="modal-footer">
-                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                              <button type="button" class="btn btn-primary">Sign In</button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                    <a href="sign-in.html" target="_blank"><li>Sign In</li></a>
                     <a href=""><li><input type="text" name="search" id="search" placeholder="Search"></li></a>
                 </ul>
             </div>
         </nav>
-        <div class="categories">
+       
+        <div id="categories" class="categories animate__animated animate__fadeInUp animate__fast" style="display: none;">
             <ul>
-                <li><button>Fashion</button></li>
-                <li><button>Devices</button></li>
-                <li><button>Electronics</button></li>
-                <li><button>Furniture</button></li>
-                <li><button>Health & Beauty</button></li>
-                <li><button>Grocery</button></li>
-                <li><button>Food Stuffs</button></li>
-                <li><button>Tools</button></li>
-                <li><button>See More</button></li>
+                <li><a href="#recommended"><button><img src="Assets/Images/Apple_Fruit_2.png" alt=""> Recommended</button></a></li>
+                <li><a href="#recommended"><button><img src="Assets/Images/Shopping_bags_psd_mockup-removebg-preview.png" alt=""> Trending</button></a></li>
+                <li><a href="#vegies"><button><img src="Assets/Images/kales-removebg-preview.png" alt="">Vegeables</button></a></li>
+                <li><a href="#meat"><button><img src="Assets/Images/beef.png" alt="">Meat</button></a></li>
+                <li><a href="#spices"><button><img src="Assets/Images/cucumber-removebg-preview.png" alt="">Spices</button></a></li>
+                <li><a href="#fruits"><button><img src="Assets/Images/coconut-removebg-preview.png" alt="">Fruits</button></a></li>
             </ul>
         </div>
-        <div class="for-you">
-            <h1>For You</h1>
+        <div class="for-you shadow-sm" id="recommended">
+            <div class="headers">
+                <h1>For You</h1>
+                <h2 class="see-more">More ></h2>
+            </div>
+            <div class="items">
+            <div class="card" data-toggle="modal" data-target="#exampleModalCenter" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                <div class="card-body ps-0 pt-0">
+                    <img src="Assets/Images/pineapple-500x500-removebg-preview.png" alt="Items">
+                    <div class="desc">
+                        <h1>Pinneaples</h1>
+                        <h2>Ksh.60/Pc</h2>
+                    </div>
+                    <button type="button" class="cartbtn"><i class="fa fa-cart-plus"></i></button>
+                    <button class="card-like"><i class="fa-solid fa-heart"></i></button>
+                </div>
+            </div>
+           
+            <div class="card">
+                <div class="card-body ps-0 pt-0">
+                    <img src="Assets/Images/onion-removebg-preview.png" alt="Items">
+                    <div class="desc">
+                        <h1>Onions</h1>
+                        <h2>Ksh.80/Kg</h2>
+                    </div>
+                    <button class="cartbtn"><i class="fa fa-cart-plus"></i></button>
+                    <button class="card-like"><i class="fa fa-heart"></i></button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body ps-0 pt-0">
+                    <img src="Assets/Images/kales-removebg-preview.png" alt="Items">
+                    <div class="desc">
+                        <h1>Kales</h1>
+                        <h2>Ksh.40/0.25Kg</h2>
+                    </div>
+                    <button class="cartbtn"><i class="fa fa-cart-plus"></i></button>
+                    <button class="card-like"><i class="fa fa-heart"></i></button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body ps-0 pt-0">
+                    <img src="Assets/Images/beef.png" alt="Items">
+                    <div class="desc">
+                        <h1>Fresh Beef</h1>
+                        <h2>Ksh.40/Kg</h2>
+                    </div>
+                    <button class="cartbtn"><i class="fa fa-cart-plus"></i></button>
+                    <button class="card-like"><i class="fa fa-heart"></i></button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body ps-0 pt-0">
+                    <img src="Assets/Images/brocolli-removebg-preview.png" alt="Items">
+                    <div class="desc">
+                        <h1>Broccoli</h1>
+                        <h2>Ksh.70/Pc</h2>
+                    </div>
+                    <button class="cartbtn"><i class="fa fa-cart-plus"></i></button>
+                    <button class="card-like"><i class="fa fa-heart"></i></button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body ps-0 pt-0">
+                    <img src="Assets/Images/Bananas-removebg-preview.png" alt="Items">
+                    <div class="desc">
+                        <h1>Ripe Bananas</h1>
+                        <h2>Ksh.10/Pc</h2>
+                    </div>
+                    <button class="cartbtn"><i class="fa fa-cart-plus"></i></button>
+                    <button class="card-like"><i class="fa fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="vegies" id="vegies">
+            <div class="headers">
+                <h1>Vegies</h1>
+                <h2 class="see-more">More ></h2>
+            </div>
             <div class="items">
             <div class="card">
                 <div class="card-body ps-0 pt-0">
-                    <img src="/Assets/Images/nick-linnen-VbJRsn2yb34-unsplash.jpg" alt="Items">
-                    <h1>Back Pack</h1>
-                    <h2>Ksh. 1200</h2>
-                    <button>Cart</button>
+                    <img src="Assets/Images/Managu-removebg-preview (1).png" alt="Items">
+                    <div class="desc">
+                        <h1>Managu</h1>
+                        <h2>Ksh.50/0.5Kg</h2>
+                    </div>
+                    <button class="cartbtn"><i class="fa fa-cart-plus"></i></button>
+                    <button class="card-like"><i class="fa fa-heart"></i></button>
                 </div>
             </div>
             <div class="card">
                 <div class="card-body ps-0 pt-0">
-                    <img src="/Assets/Images/brad-starkey-Bowrbqz1kgw-unsplash.jpg" alt="Items">
-                    <h1>Nike Sneakers</h1>
-                    <h2>Ksh. 1450</h2>
-                    <button>Cart</button>
+                    <img src="Assets/Images/GettyImages-523635727-scaled-removebg-preview (1).png" alt="Items">
+                    <div class="desc">
+                        <h1>Cabbages</h1>
+                        <h2>Ksh.50/Pc</h2>
+                    </div>
+                    <button class="cartbtn"><i class="fa fa-cart-plus"></i></button>
+                    <button class="card-like"><i class="fa fa-heart"></i></button>
                 </div>
             </div>
             <div class="card">
                 <div class="card-body ps-0 pt-0">
-                    <img src="/Assets/Images/mohamad-khosravi-HgyAIYvMWkw-unsplash.jpg" alt="Items">
-                    <h1>Blazer</h1>
-                    <h2>Ksh. 1799</h2>
-                    <button>Cart</button>
+                    <img src="Assets/Images/spinach3-removebg-preview.png" alt="Items">
+                    <div class="desc">
+                        <h1>Spinach</h1>
+                        <h2>Ksh.20/Pc</h2>
+                    </div>
+                    <button class="cartbtn"><i class="fa fa-cart-plus"></i></button>
+                    <button class="card-like"><i class="fa fa-heart"></i></button>
                 </div>
             </div>
             <div class="card">
                 <div class="card-body ps-0 pt-0">
-                    <img src="/Assets/Images/alex-azabache-HDC902Q0wDg-unsplash.jpg" alt="Items">
-                    <h1>Water Can</h1>
-                    <h2>Ksh. 749</h2>
-                    <button>Cart</button>
+                    <img src="Assets/Images/Terere-removebg-preview.png" alt="Items">
+                    <div class="desc">
+                        <h1>Mchicha</h1>
+                        <h2>Ksh.40/Kg</h2>
+                    </div>
+                    <button class="cartbtn"><i class="fa fa-cart-plus"></i></button>
+                    <button class="card-like"><i class="fa fa-heart"></i></button>
                 </div>
             </div>
             <div class="card">
                 <div class="card-body ps-0 pt-0">
-                    <img src="/Assets/Images/Jogoo-1.png" alt="Items">
-                    <h1>Jogoo Flour</h1>
-                    <h2>Ksh. 210</h2>
-                    <button>Cart</button>
+                    <img src="Assets/Images/red_cabbage-removebg-preview.png" alt="Items">
+                    <div class="desc">
+                        <h1>Red Cabbage</h1>
+                        <h2>Ksh.70/Pc</h2>
+                    </div>
+                    <button class="cartbtn"><i class="fa fa-cart-plus"></i></button>
+                    <button class="card-like"><i class="fa fa-heart"></i></button>
                 </div>
             </div>
             <div class="card">
                 <div class="card-body ps-0 pt-0">
-                    <img src="/Assets/Images/adrian-regeci-skw9mNbWd7w-unsplash.jpg" alt="Items">
-                    <h1>Sony Headphones</h1>
-                    <h2>Ksh. 17000</h2>
-                    <button>Cart</button>
+                    <img src="Assets/Images/kales-removebg-preview.png" alt="Items">
+                    <div class="desc">
+                        <h1>Kales</h1>
+                        <h2>Ksh.10/Pc</h2>
+                    </div>
+                    <button class="cartbtn"><i class="fa fa-cart-plus"></i></button>
+                    <button class="card-like act"><i class="fa fa-heart"></i></button>
                 </div>
             </div>
-            <div class="card">
-                <div class="card-body ps-0 pt-0">
-                    <img src="/Assets/Images/neil-soni-6wdRuK7bVTE-unsplash.jpg" alt="Items">
-                    <h1>Iphone 12 Pro</h1>
-                    <h2>Ksh. 110000</h2>
-                    <button>Cart</button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-body ps-0 pt-0">
-                    <img src="/Assets/Images/shoe.jpg" alt="Items">
-                    <h1>Nike Sneakers</h1>
-                    <h2>Ksh. 999</h2>
-                    <button>Cart</button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-body ps-0 pt-0">
-                    <img src="/Assets/Images/headphones.png" alt="Items">
-                    <h1>JBL Headphones</h1>
-                    <h2>Ksh. 1233</h2>
-                    <button>Cart</button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-body ps-0 pt-0">
-                    <img src="/Assets/Images/air pods.png" alt="Items">
-                    <h1>Apple Airpods</h1>
-                    <h2>Ksh. 49000</h2>
-                    <button>Cart</button>
-                </div>
-            </div>
-            </div>
-            <button class="more">More</button>
         </div>
-        <div class="near-you">
-            <h1>Near You</h1>
+        </div>
+        <div class="fruits" id="meat">
+            <div class="headers">
+                <h1>Fruits</h1>
+                <h2 class="see-more">More ></h2>
+            </div>
             <div class="items">
             <div class="card">
                 <div class="card-body ps-0 pt-0">
-                    <img src="/Assets/Images/shoe.jpg" alt="Items">
-                    <h1>Nike Sneakers</h1>
-                    <h2>Ksh. 1700</h2>
-                    <button>Cart</button>
+                    <img src="Assets/Images/Avocado-removebg-preview.png" alt="Items">
+                    <div class="desc">
+                        <h1>Ovacadoes</h1>
+                        <h2>Ksh.25/Pc</h2>
+                    </div>
+                    <button class="cartbtn"><i class="fa fa-cart-plus"></i></button>
+                    <button class="card-like"><i class="fa fa-heart"></i></button>
                 </div>
             </div>
             <div class="card">
                 <div class="card-body ps-0 pt-0">
-                    <img src="/Assets/Images/shoe.jpg" alt="Items">
-                    <h1>Nike Sneakers</h1>
-                    <h2>Ksh. 1700</h2>
-                    <button>Cart</button>
+                    <img src="Assets/Images/Apple_Fruit_2.png" alt="Items">
+                    <div class="desc">
+                        <h1>Apples</h1>
+                        <h2>Ksh.30/Pc</h2>
+                    </div>
+                    <button class="cartbtn"><i class="fa fa-cart-plus"></i></button>
+                    <button class="card-like"><i class="fa fa-heart"></i></button>
                 </div>
             </div>
             <div class="card">
                 <div class="card-body ps-0 pt-0">
-                    <img src="/Assets/Images/shoe.jpg" alt="Items">
-                    <h1>Nike Sneakers</h1>
-                    <h2>Ksh. 1700</h2>
-                    <button>Cart</button>
+                    <img src="Assets/Images/Bananas-removebg-preview.png" alt="Items">
+                    <div class="desc">
+                        <h1>Bananas</h1>
+                        <h2>Ksh.10/Pc</h2>
+                    </div>
+                    <button class="cartbtn"><i class="fa fa-cart-plus"></i></button>
+                    <button class="card-like act"><i class="fa fa-heart"></i></button>
                 </div>
             </div>
             <div class="card">
                 <div class="card-body ps-0 pt-0">
-                    <img src="/Assets/Images/shoe.jpg" alt="Items">
-                    <h1>Nike Sneakers</h1>
-                    <h2>Ksh. 1700</h2>
-                    <button>Cart</button>
+                    <img src="Assets/Images/coconut-removebg-preview.png" alt="Items">
+                    <div class="desc">
+                        <h1>Coconuts</h1>
+                        <h2>Ksh.50/Pc</h2>
+                    </div>
+                    <button class="cartbtn"><i class="fa fa-cart-plus"></i></button>
+                    <button class="card-like"><i class="fa fa-heart"></i></button>
                 </div>
             </div>
             <div class="card">
                 <div class="card-body ps-0 pt-0">
-                    <img src="/Assets/Images/shoe.jpg" alt="Items">
-                    <h1>Nike Sneakers</h1>
-                    <h2>Ksh. 1700</h2>
-                    <button>Cart</button>
-                </div>
-            </div>
-           <!--<div class="card">
-                <div class="card-body ps-0 pt-0">
-                    <img src="/Assets/Images/shoe.jpg" alt="Items">
-                    <h1>Nike Sneakers</h1>
-                    <h2>Ksh. 1700</h2>
-                    <button>Cart</button>
+                    <img src="Assets/Images/grapes-removebg-preview.png" alt="Items">
+                    <div class="desc">
+                        <h1>Red Grapes</h1>
+                        <h2>Ksh.140/Kg</h2>
+                    </div>
+                    <button class="cartbtn"><i class="fa fa-cart-plus"></i></button>
+                    <button class="card-like"><i class="fa fa-heart"></i></button>
                 </div>
             </div>
             <div class="card">
                 <div class="card-body ps-0 pt-0">
-                    <img src="/Assets/Images/shoe.jpg" alt="Items">
-                    <h1>Nike Sneakers</h1>
-                    <h2>Ksh. 1700</h2>
-                    <button>Cart</button>
+                    <img src="Assets/Images/oranges.png" alt="Items">
+                    <div class="desc">
+                        <h1>Oranges</h1>
+                        <h2>Ksh.15/Pc</h2>
+                    </div>
+                    <button class="cartbtn"><i class="fa fa-cart-plus"></i></button>
+                    <button class="card-like"><i class="fa fa-heart"></i></button>
                 </div>
             </div>
-            <div class="card">
-                <div class="card-body ps-0 pt-0">
-                    <img src="/Assets/Images/shoe.jpg" alt="Items">
-                    <h1>Nike Sneakers</h1>
-                    <h2>Ksh. 1700</h2>
-                    <button>Cart</button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-body ps-0 pt-0">
-                    <img src="/Assets/Images/shoe.jpg" alt="Items">
-                    <h1>Nike Sneakers</h1>
-                    <h2>Ksh. 1700</h2>
-                    <button>Cart</button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-body ps-0 pt-0">
-                    <img src="/Assets/Images/shoe.jpg" alt="Items">
-                    <h1>Nike Sneakers</h1>
-                    <h2>Ksh. 1700</h2>
-                    <button>Cart</button>
-                </div>
-            </div>-->
-            </div>
-            <button class="more">More</button>
         </div>
+        </div>
+        <div class="vegies" id="spices">
+            <div class="headers">
+                <h1>Spices</h1>
+                <h2 class="see-more">More ></h2>
+            </div>
+            <div class="items">
+            <div class="card">
+                <div class="card-body ps-0 pt-0">
+                    <img src="Assets/Images/green_pepper-removebg-preview.png" alt="Items">
+                    <div class="desc">
+                        <h1>Green Pepper</h1>
+                        <h2>Ksh.75/Kg</h2>
+                    </div>
+                    <button class="cartbtn"><i class="fa fa-cart-plus"></i></button>
+                    <button class="card-like"><i class="fa fa-heart"></i></button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body ps-0 pt-0">
+                    <img src="Assets/Images/chili-removebg-preview.png" alt="Items">
+                    <div class="desc">
+                        <h1>Chilli</h1>
+                        <h2>Ksh.50/Kg</h2>
+                    </div>
+                    <button class="cartbtn"><i class="fa fa-cart-plus"></i></button>
+                    <button class="card-like"><i class="fa fa-heart"></i></button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body ps-0 pt-0">
+                    <img src="Assets/Images/cucumber-removebg-preview.png" alt="Items">
+                    <div class="desc">
+                        <h1>Cucumber</h1>
+                        <h2>Ksh.25/Pc</h2>
+                    </div>
+                    <button class="cartbtn"><i class="fa fa-cart-plus"></i></button>
+                    <button class="card-like"><i class="fa fa-heart"></i></button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body ps-0 pt-0">
+                    <img src="Assets/Images/ginger-removebg-preview.png" alt="Items">
+                    <div class="desc">
+                        <h1>Ginger</h1>
+                        <h2>Ksh.40/Kg</h2>
+                    </div>
+                    <button class="cartbtn"><i class="fa fa-cart-plus"></i></button>
+                    <button class="card-like"><i class="fa fa-heart"></i></button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body ps-0 pt-0">
+                    <img src="Assets/Images/red_pepper-removebg-preview.png" alt="Items">
+                    <div class="desc">
+                        <h1>Red Pepper</h1>
+                        <h2>Ksh.15/Pc</h2>
+                    </div>
+                    <button class="cartbtn"><i class="fa fa-cart-plus"></i></button>
+                    <button class="card-like"><i class="fa fa-heart"></i></button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body ps-0 pt-0">
+                    <img src="Assets/Images/dania-removebg-preview.png" alt="Items">
+                    <div class="desc">
+                        <h1>Corriander</h1>
+                        <h2>Ksh.10/Pc</h2>
+                    </div>
+                    <button class="cartbtn"><i class="fa fa-cart-plus"></i></button>
+                    <button class="card-like"><i class="fa fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="fruits" id="fruits">
+            <div class="headers">
+                <h1>Fresh Meat</h1>
+                <h2 class="see-more">More ></h2>
+            </div>
+            <div class="items">
+            <div class="card">
+                <div class="card-body ps-0 pt-0">
+                    <img src="Assets/Images/beef.png" alt="Items">
+                    <div class="desc">
+                        <h1>Fresh Beef</h1>
+                        <h2>Ksh.400/Kg</h2>
+                    </div>
+                    <button class="cartbtn"><i class="fa fa-cart-plus"></i></button>
+                    <button class="card-like act"><i class="fa fa-heart"></i></button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body ps-0 pt-0">
+                    <img src="Assets/Images/omena-dried-removebg-preview.png" alt="Items">
+                    <div class="desc">
+                        <h1>Omena</h1>
+                        <h2>Ksh.80/Kg</h2>
+                    </div>
+                    <button class="cartbtn"><i class="fa fa-cart-plus"></i></button>
+                    <button class="card-like"><i class="fa fa-heart"></i></button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body ps-0 pt-0">
+                    <img src="Assets/Images/eggs-removebg-preview.png" alt="Items">
+                    <div class="desc">
+                        <h1>Chicken Eggs</h1>
+                        <h2>Ksh.15/Pc</h2>
+                    </div>
+                    <button class="cartbtn"><i class="fa fa-cart-plus"></i></button>
+                    <button class="card-like"><i class="fa fa-heart"></i></button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body ps-0 pt-0">
+                    <img src="Assets/Images/salmon_fish-removebg-preview.png" alt="Items">
+                    <div class="desc">
+                        <h1>Salmon Fish</h1>
+                        <h2>Ksh.50/Pc</h2>
+                    </div>
+                    <button class="cartbtn"><i class="fa fa-cart-plus"></i></button>
+                    <button class="card-like"><i class="fa fa-heart"></i></button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body ps-0 pt-0">
+                    <img src="Assets/Images/pork-removebg-preview.png" alt="Items">
+                    <div class="desc">
+                        <h1>Fresh Pork</h1>
+                        <h2>Ksh.140/Kg</h2>
+                    </div>
+                    <button class="cartbtn"><i class="fa fa-cart-plus"></i></button>
+                    <button class="card-like"><i class="fa fa-heart"></i></button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body ps-0 pt-0">
+                    <img src="Assets/Images/chicken-removebg-preview.png" alt="Items">
+                    <div class="desc">
+                        <h1>Chicken</h1>
+                        <h2>Ksh.300/Kg</h2>
+                    </div>
+                    <button class="cartbtn"><i class="fa fa-cart-plus"></i></button>
+                    <button class="card-like"><i class="fa fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="recipes" id="recipes">
+            <div class="headers">
+                <h1>Recipe</h1>
+                <h2 class="see-more">More ></h2>
+            </div>
+            <div class="items">
+            <div class="card">
+                <div class="card-body ps-0 pt-0">
+                    <img src="Assets/Images/louis-hansel-v3OlBE6-fhU-unsplash.jpg" alt="Items">
+                    <div class="desc">
+                        <h1>Preparing Salmon Stake with White Rice</h1>
+                        <h2>Chef Louis Hansel</h2>
+                        <h2>1hr 27min</h2>
+                    </div>
+                    <button class="bookm"><i class="fa-solid fa-bookmark"></i></button>
+                    <button class="cartbtn"><i class="fa fa-cart-plus"></i></button>
+                    <button class="card-like"><i class="fa fa-heart"></i></button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body ps-0 pt-0">
+                    <img src="Assets/Images/travis-grossen-AXDTTuh-0UI-unsplash.jpg" alt="Items">
+                    <div class="desc">
+                        <h1>Meat Rolls like you have never seen</h1>
+                        <h2>Chef Tafawa Balewa</h2>
+                        <h2>45min</h2>
+                    </div>
+                    <button class="bookm"><i class="fa-solid fa-bookmark"></i></button>
+                    <button class="cartbtn"><i class="fa fa-cart-plus"></i></button>
+                    <button class="card-like"><i class="fa fa-heart"></i></button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body ps-0 pt-0 p-relative">
+                    <img src="Assets/Images/febrian-zakaria-SiQgni-cqFg-unsplash.jpg" alt="Items">
+                    <div class="desc">
+                        <h1>Lorem ipsum dolor sit pisicine</h1>
+                        <h2>Chef Febrian Zakaria</h2>
+                        <h2>1hr 12min</h2>
+                    </div>
+                    <button class="bookm"><i class="fa-solid fa-bookmark"></i></button>
+                    <button class="cartbtn"><i class="fa fa-cart-plus"></i></button>
+                    <button class="card-like"><i class="fa fa-heart"></i></button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body ps-0 pt-0">
+                    <img src="Assets/Images/toa-heftiba-5JeTin55H9U-unsplash.jpg" alt="Items">
+                    <div class="desc">
+                        <h1>Consectetur adipisicing eliut</h1>
+                        <h2>Chef Toa Heftiba</h2>
+                        <h2>1hr 56min</h2>
+                    </div>
+                    <button class="bookm"><i class="fa-solid fa-bookmark"></i></button>
+                    <button class="cartbtn"><i class="fa fa-cart-plus"></i></button>
+                    <button class="card-like"><i class="fa fa-heart"></i></button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body ps-0 pt-0">
+                    <img src="Assets/Images/mohamed-nohassi-DdglEoIC2y4-unsplash.jpg" alt="Items">
+                    <div class="desc">
+                        <h1>Meat Rolls like you have never seen</h1>
+                        <h2>Chef Mohammed Nohassi</h2>
+                        <h2>1hr 25min</h2>
+                    </div>
+                    <button class="bookm"><i class="fa-solid fa-bookmark"></i></button>
+                    <button class="cartbtn"><i class="fa fa-cart-plus"></i></button>
+                    <button class="card-like"><i class="fa fa-heart"></i></button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body ps-0 pt-0">
+                    <img src="Assets/Images/becca-tapert-RjmGzTg4_mw-unsplash.jpg" alt="Items">
+                    <div class="desc">
+                        <h1>Eaque cumque cuitaque praesentium</h1>
+                        <h2>Chef Becca Tapert</h2>
+                        <h2>2hr 05min</h2>
+                    </div>
+                    <button class="bookm"><i class="fa-solid fa-bookmark"></i></button>
+                    <button class="cartbtn"><i class="fa fa-cart-plus"></i></button>
+                    <button class="card-like"><i class="fa fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+        </div>          
+          <!-- Modal -->
+          <div class="modal fade animate__animated animate__slideInLeft animate__fast" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+              <div class="modal-content">
+                <div class="modal-body d-block">
+                    <i class="fa fa-close btn-close" data-bs-dismiss="modal" aria-label="Close"></i>
+                    <img src="Assets/Images/pineapple-500x500-removebg-preview.png" alt="Pinneaples">
+                    <div class="modal-desc">
+                        <div class="title-units">
+                            <h1>Pinneaples</h1>
+                            <div class="units">
+                                <button class="units-btn less">-</button>
+                                <button class="units-btn total">2</button>
+                                <button class="units-btn add">+</button>
+                            </div>
+                        </div>
+                        <div class="desc-info">
+                            <h2>Description</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur nemo numquam, sit culpa blanditiis, dolor, inventore nostrum fugiat iure molestiae iusto modi similique placeat nam.</p>
+                        </div>
+                        <div class="desc-vendor">
+                            <h2>Seller Info</h2>
+                            <button class="btnm"><i class="fa fa-location"></i><h2>Katumani Market</h2></button>
+                            <button class="btnm"><i class="fa fa-timeline"></i><h2>17min</h2></button>
+                        </div>
+                        <div class="modal-footer">                            
+                            <h2 class="price">Ksh. 60/Pc</h2>
+                            <h2 class="full-price">Ksh. 120</h2>
+                            <button type="button" class="modal-cart" data-bs-dismiss="modal" aria-label="Close">Add to Cart</button>
+                        </div>
+                        <button class="card-like"><i class="fa fa-heart"></i></button>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
         <footer>
             <div class="contacts">
                 <ul>
@@ -266,11 +555,14 @@
                 <ul>
                     <li>Locations</li>
                     <li>Team</li>
+                    <li>Payment</li>
                     <li>Careers</li>
                     <li>Mobile App</li>
                     <li>FAQs</li>
                 </ul>
             </div>
         </footer>
+        <script src="script.js"></script>
+        <script src="Assets/bootstrap-5.0 CSS & Jscript/js/bootstrap.min.js"></script>
     </body>
 </head>
